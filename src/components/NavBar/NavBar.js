@@ -1,7 +1,9 @@
 import React from 'react'
+import CartWidget from '../CartWidget/CartWidget';
 
 const navBar = () => {
     return (
+        
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="https://mariantonia416.github.io/unlimited-producciones/">Unlimited</a>
@@ -27,9 +29,12 @@ const navBar = () => {
               </li>
             </ul>
           </div>
+          <div>
+               <CartWidget/>
+            </div>
         </div>
       </nav>
     )
 }
 
-export default navBar
+export default navBar;
