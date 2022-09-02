@@ -6,6 +6,7 @@ import { BrowserRouter as Router} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemList from './components/ItemList/ItemList';
 
 //BOOTSTRAP
 import 'bootstrap/dist/css/bootstrap.css';
@@ -20,14 +21,19 @@ function App() {
         <Router>
           <NavBar/>
         </Router>
-        <ItemListContainer
-        greeting="¡Bienvenido! Esta será la lista de items"
-        />
-        <ItemCount
-          inicial={1}
-          stock={10}
-        />
       </header>
+      <div>
+        <ItemListContainer
+          greeting="¡Bienvenido! Esta será la lista de items"
+        />
+        <ItemList/>
+      </div>
+      <div>
+        <ItemCount
+            inicial={1}
+            stock={10}
+          />
+      </div>
     </div>
   );
 }
