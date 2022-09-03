@@ -26,6 +26,8 @@ function App() {
         <ItemListContainer
           greeting="¡Bienvenido! Esta será la lista de items"
         />
+      </div>
+      <div className='bg-light'>
         <ItemList/>
       </div>
       <div>
