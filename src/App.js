@@ -4,9 +4,8 @@ import { BrowserRouter as Router} from 'react-router-dom'
 
 //COMPONENTS
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
-import ItemList from './components/ItemList/ItemList';
+import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
+
 
 //BOOTSTRAP
 import 'bootstrap/dist/css/bootstrap.css';
@@ -23,18 +22,7 @@ function App() {
         </Router>
       </header>
       <div>
-        <ItemListContainer
-          greeting="¡Bienvenido! Esta será la lista de items"
-        />
-      </div>
-      <div className='bg-light'>
-        <ItemList/>
-      </div>
-      <div>
-        <ItemCount
-            inicial={1}
-            stock={10}
-          />
+        <ItemDetailContainer/>
       </div>
     </div>
   );
