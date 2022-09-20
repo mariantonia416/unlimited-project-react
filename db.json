@@ -12,14 +12,14 @@
         "type": "Iluminación",
         "nombre": "Luces Chauvet",
         "precio": 1100000,
-        "image": "https://res.cloudinary.com/unlimited/image/upload/f_auto,q_auto/w_400/servicios-unlimited-sonido-3_zvgigp.jpg"
+        "image": "https://res.cloudinary.com/unlimited/image/upload/f_auto,q_auto/w_400/servicios-unlimited-iluminacion.jpg"
       },
       {
         "id": 3,
         "type": "Sonido",
         "nombre": "Caja de sonido",
         "precio": 800000,
-        "image": "https://res.cloudinary.com/unlimited/image/upload/f_auto,q_auto/w_400/servicios-unlimited-iluminacion.jpg"
+        "image": "https://res.cloudinary.com/unlimited/image/upload/f_auto,q_auto/w_400/servicios-unlimited-sonido-3_zvgigp.jpg"
       },
       {
         "id": 4,
