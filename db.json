@@ -1,28 +1,28 @@
 {
     "productos": [
       {
-        "id": 1,
+        "prod_id": 1,
         "type": "Pantallas",
         "nombre": "LED Unilumin Uslim 2.6",
         "precio": 3000000,
         "image": "https://res.cloudinary.com/unlimited/image/upload/f_auto,q_auto/w_400/servicios-unlimited-pantallas.jpg"
       },
       {
-        "id": 2,
+        "prod_id": 2,
         "type": "Iluminación",
         "nombre": "Luces Chauvet",
         "precio": 1100000,
         "image": "https://res.cloudinary.com/unlimited/image/upload/f_auto,q_auto/w_400/servicios-unlimited-iluminacion.jpg"
       },
       {
-        "id": 3,
+        "prod_id": 3,
         "type": "Sonido",
         "nombre": "Caja de sonido",
         "precio": 800000,
         "image": "https://res.cloudinary.com/unlimited/image/upload/f_auto,q_auto/w_400/servicios-unlimited-sonido-3_zvgigp.jpg"
       },
       {
-        "id": 4,
+        "prod_id": 4,
         "type": "Techos",
         "nombre": "Pabellón",
         "precio": 1200000,
