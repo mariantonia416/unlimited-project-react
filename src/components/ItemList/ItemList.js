@@ -1,12 +1,29 @@
-import React from 'react';
-import Item from '../Item/Item';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import ItemCard from '../ItemCard/ItemCard';
 
-const ItemList = ({users}) => {
-	
+//LINK ROUTER DOM
+import { Link } from 'react-router-dom';
+
+const ItemList = () => {
+	const [users, setUsers] = useState([]);
+
+	useEffect(() => {
+		axios('https://my-json-server.typicode.com/mariantonia416/unlimited-project-react/productos').then((res) =>
+			setUsers(res.data)
+		);
+	}, []);
+
 	return (
-		<div className='d-flex flex-wrap justify-content-center'>
+		<div className='d-flex flex-wrap'>
 			{users.map((user) => {
-				return <Item key={user.id} data={user} />;
+				return (
+					<div key={user.id}>
+						<Link to={`/detail/${user.id}`} className='text-decoration-none'>
+							<ItemCard data={user} />
+						</Link>
+					</div>
+				);
 			})}
 		</div>
 	);
