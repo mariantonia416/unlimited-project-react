@@ -3,15 +3,7 @@ import ItemList from '../../components/ItemList/ItemList';
 
 const Home = () => {
 	return (
-		<div
-			style={{
-				display: 'flex',
-				justifyContent: 'center',
-				flexDirection: 'column',
-				alignItems: 'center',
-				padding: '25px',
-			}}
-		>
+		<div>
 			<h1>Home</h1>
 			<ItemList />
 		</div>

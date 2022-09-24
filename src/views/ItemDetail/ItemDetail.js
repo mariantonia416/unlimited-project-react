@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router';
-import ItemCard from '../../components/ItemCard/ItemCard';
+import ItemCardDetail from '../../components/ItemCardDetail/ItemCardDetail';
+
 
 const ItemDetail = () => {
 	const [user, setUser] = useState([]);
@@ -18,21 +19,11 @@ const ItemDetail = () => {
 	return (
 		<div>	
             <div>
-                <ItemCard data={user} />
+                <ItemCardDetail data={user} />
             </div>
 		</div>
 	);
-    // return (
-	// 	<div>
-	// 		{user.map((item) => {
-	// 			return (
-	// 				<div>
-	// 					<ItemCard data={item} />
-	// 				</div>
-	// 			);
-	// 		})}
-	// 	</div>
-	// );
+    
 };
 
 export default ItemDetail;

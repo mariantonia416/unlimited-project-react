@@ -9,12 +9,12 @@ import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
 
 // VIEWS
-import Home from './views/Home/Home';
 import Contacto from './views/Contacto/Contacto';
 import Galeria from './views/Galeria/Galeria';
 import Servicios from './views/Servicios/Servicios';
 import Clientes from './views/Clientes/Clientes';
 import ItemDetail from './views/ItemDetail/ItemDetail';
+import ItemList from './components/ItemList/ItemList';
 
 const App = () => {
 	return (
@@ -23,7 +23,11 @@ const App = () => {
 				<Header />
 				<Navigation />
 				<Routes>
-					<Route path='/' element={<Home />} />
+					<Route path='/' element={<ItemList />} />
+					<Route path='/category/:type' element={<ItemList />} />
+
+
+					
 					<Route path='/contacto' element={<Contacto />} />
 					<Route path='/galeria' element={<Galeria />} />
 					<Route path='/clientes' element={<Clientes />} />

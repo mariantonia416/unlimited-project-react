@@ -7,11 +7,11 @@ const NavBar = () => {
 				<Link to='/' className='py-3 text-white text-decoration-none fs-5'>
 					Home
 				</Link>
-				<Link to='/servicios' className='py-3 text-white text-decoration-none fs-5'>
-					Servicios
+				<Link to='/category/Sonido' className='py-3 text-white text-decoration-none fs-5'>
+					Sonido
 				</Link>
-				<Link to='/clientes' className='py-3 text-white text-decoration-none fs-5'>
-					Clientes
+				<Link to='/category/Pantallas' className='py-3 text-white text-decoration-none fs-5'>
+					Pantallas
 				</Link>
 				<Link to='/galeria' className='py-3 text-white text-decoration-none fs-5'>
 					Galería
