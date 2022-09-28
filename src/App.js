@@ -15,9 +15,12 @@ import Servicios from './views/Servicios/Servicios';
 import Clientes from './views/Clientes/Clientes';
 import ItemDetail from './views/ItemDetail/ItemDetail';
 import ItemList from './components/ItemList/ItemList';
+import Cart from './components/Cart/Cart';
+import CartContextProvider from './components/Cart/CartContext';
 
 const App = () => {
 	return (
+		<CartContextProvider>
 		<Router>
 			<div className='App'>
 				<Header />
@@ -29,6 +32,7 @@ const App = () => {
 
 					
 					<Route path='/contacto' element={<Contacto />} />
+					<Route path='/cart' element={<Cart />} />
 					<Route path='/galeria' element={<Galeria />} />
 					<Route path='/clientes' element={<Clientes />} />
 					<Route path='/servicios' element={<Servicios />} />
@@ -36,6 +40,7 @@ const App = () => {
 				</Routes>
 			</div>
 		</Router>
+		</CartContextProvider>
 	);
 };
 

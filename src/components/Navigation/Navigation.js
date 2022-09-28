@@ -19,6 +19,9 @@ const NavBar = () => {
 				<Link to='/contacto' className='py-3 text-white text-decoration-none fs-5'>
 					Contacto
 				</Link>
+				<Link to='/cart' className='py-3 text-white text-decoration-none fs-5'>
+					Carrito
+				</Link>
 			</ul>
 		</nav>
 	);

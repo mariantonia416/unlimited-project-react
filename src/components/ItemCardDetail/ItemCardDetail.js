@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import ItemCount from "../Counter/Counter";
+import { useContext } from "react";
+import { CartContext } from '../Cart/CartContext';
 
 const Img = styled('img')({
   margin: 'auto',
@@ -14,8 +16,9 @@ const Img = styled('img')({
 });
 
 const ItemCardDetail = ({ data }) => {
-  const onAdd = (counter) => {
-    console.log({ producto: data, cantidad: counter });
+    const {AddToCart} = useContext(CartContext)
+    const onAdd = (counter) => {
+        AddToCart(data, counter)
   };
     return (
         <Box
