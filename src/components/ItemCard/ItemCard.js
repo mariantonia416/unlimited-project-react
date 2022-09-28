@@ -5,20 +5,20 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-const ItemCard = ({ data }) => {
+const ItemCard = ({ itemsData }) => {
 	return (
 		<Card className="m-5 text-decoration-none" sx={{ maxWidth: 345 }}>
 			<CardActionArea>
-				<CardMedia component='img' image={data.image} />
+				<CardMedia component='img' image={itemsData.img} />
 				<CardContent className='text-center'>
 					<Typography variant='h5' component='div'>
-						{data.nombre}
+						{itemsData.Title}
 					</Typography>
 					<Typography className='fs-4'>
-						COP$ {data.precio}
+						COP$ {itemsData.Price}
 					</Typography>
 					<Typography className='fw-bold fs-6 pt-2 text-muted' gutterBottom>
-						{data.type}
+						Categoría: {itemsData.category}
 					</Typography>
 				</CardContent>
 			</CardActionArea>

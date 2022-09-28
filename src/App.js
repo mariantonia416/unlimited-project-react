@@ -14,7 +14,7 @@ import Galeria from './views/Galeria/Galeria';
 import Servicios from './views/Servicios/Servicios';
 import Clientes from './views/Clientes/Clientes';
 import ItemDetail from './views/ItemDetail/ItemDetail';
-import ItemList from './components/ItemList/ItemList';
+import CardList from './components/CardList/CardList';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './components/Cart/CartContext';
 
@@ -26,8 +26,8 @@ const App = () => {
 				<Header />
 				<Navigation />
 				<Routes>
-					<Route path='/' element={<ItemList />} />
-					<Route path='/category/:type' element={<ItemList />} />
+					<Route path='/' element={<CardList />} />
+					<Route path='/category/:type' element={<CardList />} />
 
 
 					
