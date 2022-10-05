@@ -26,7 +26,7 @@ const ItemCardDetail = ({ itemsData }) => {
             theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         }}
         >
-        <Grid container spacing={6} className='align-items-center'>
+        <Grid container spacing={6} className='justify-text-center align-items-center'>
             <Grid item>
                 <ButtonBase className='w-100'>
                     <Img src={itemsData.img} alt='Unlimited' />
