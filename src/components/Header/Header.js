@@ -12,7 +12,6 @@ const Header = () => {
 					width='180px'
 				/>
 			</Link>
-			<h1 className='text-white w-100 text-center pb-5'>Unlimited App</h1>
 		</div>
 	);
 };

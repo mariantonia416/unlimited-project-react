@@ -1,27 +1,22 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
+import { styled } from '@mui/material/styles';
 import ItemCount from "../Counter/Counter";
-import { useContext } from "react";
-import { CartContext } from '../Cart/CartContext';
+
 
 const Img = styled('img')({
-  margin: 'auto',
-  display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%',
-});
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  });
 
-const ItemCardDetail = ({ data }) => {
-    const {AddToCart} = useContext(CartContext)
-    const onAdd = (counter) => {
-        AddToCart(data, counter)
-  };
+const ItemCardDetail = ({ itemsData }) => {
     return (
-        <Box
+		<Box
         className='w-75'
         sx={{
             p: 4,
@@ -34,34 +29,34 @@ const ItemCardDetail = ({ data }) => {
         <Grid container spacing={6} className='align-items-center'>
             <Grid item>
                 <ButtonBase className='w-100'>
-                    <Img src={data.image} alt='Unlimited' />
+                    <Img src={itemsData.img} alt='Unlimited' />
                 </ButtonBase>
             </Grid>
             <Grid item xs={12} sm container>
                 <Grid item xs container direction="column" spacing={2}>
                     <Grid item xs>
                         <Typography className='fs-2' component="div">
-                        {data.nombre}
+                        {itemsData.Title}
                         </Typography>
                         <Typography className='fs-6 text-muted'>
-                        {data.type}
+                        {itemsData.category}
                         </Typography>
                         <Typography className='mt-4 fs-5' component="div">
                             Precio
                         </Typography>
                         <Typography className='fs-5' component="div">
-                            $COP {data.precio}
+                            $COP {itemsData.Price}
                         </Typography>
                         <Typography className='mt-3 fs-5 fw-light' component="div">
                             Cantidad
                         </Typography>
-                        <ItemCount stock={10} inicial={1} onAdd={onAdd} />
+                        <ItemCount stock={10} inicial={1} />
                     </Grid>
                 </Grid>
             </Grid>
         </Grid>
     </Box>
-    )
-}
+	);
+};
 
 export default ItemCardDetail;

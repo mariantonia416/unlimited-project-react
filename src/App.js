@@ -1,3 +1,5 @@
+import React from 'react';
+
 //BOOTSTRAP
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -8,26 +10,29 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
 
+// CONTEXT
+import { ItemsProvider } from './components/Cart/CartContext';
+
 // VIEWS
 import Contacto from './views/Contacto/Contacto';
 import Galeria from './views/Galeria/Galeria';
 import Servicios from './views/Servicios/Servicios';
 import Clientes from './views/Clientes/Clientes';
 import ItemDetail from './views/ItemDetail/ItemDetail';
-import ItemList from './components/ItemList/ItemList';
+import CardList from './components/CardList/CardList';
 import Cart from './components/Cart/Cart';
-import CartContextProvider from './components/Cart/CartContext';
+import Category from './views/Category/Category';
 
 const App = () => {
 	return (
-		<CartContextProvider>
+		<ItemsProvider>
 		<Router>
-			<div className='App'>
+			<div>
 				<Header />
 				<Navigation />
 				<Routes>
-					<Route path='/' element={<ItemList />} />
-					<Route path='/category/:type' element={<ItemList />} />
+					<Route path='/' element={<CardList />} />
+					<Route path='/category/:category' element={<Category />} />
 
 
 					
@@ -36,11 +41,11 @@ const App = () => {
 					<Route path='/galeria' element={<Galeria />} />
 					<Route path='/clientes' element={<Clientes />} />
 					<Route path='/servicios' element={<Servicios />} />
-					<Route path='/detail/:prod_id' element={<ItemDetail />} />
+					<Route path='/detail/:id' element={<ItemDetail />} />
 				</Routes>
 			</div>
 		</Router>
-		</CartContextProvider>
+		</ItemsProvider>
 	);
 };
 
