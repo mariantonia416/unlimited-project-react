@@ -1,25 +1,50 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+
+import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
+import Progress from '../Spinner/Spinner'
+import React, { useState, useEffect } from 'react';
 
 const ItemCard = ({ itemsData }) => {
+	
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setIsLoading(false);
+		}, 2000);
+	});
+
 	return (
-		<Card className="m-5 text-decoration-none" sx={{ maxWidth: 345 }}>
-			<CardMedia component='img' image={itemsData.img} />
-			<CardContent className='text-center'>
-				<Typography variant='h5' component='div'>
-					{itemsData.Title}
-				</Typography>
-				<Typography className='fs-4'>
-					COP$ {itemsData.Price}
-				</Typography>
-				<Typography className='fw-bold fs-6 pt-2 text-muted' gutterBottom>
-					Categoría: {itemsData.category}
-				</Typography>
-			</CardContent>
-		</Card>
+		
+		<div className="m-5 text-decoration-none text-center text-dark">
+            
+                <div className='fs-2 d-flex justify-content-center align-items-center' component="div">
+				
+				{isLoading ? (
+					<div className='d-flex justify-content-center align-items-center' style={{width:'500px', height:'500px'}}>
+						<Progress />
+					</div>
+					
+				) : (
+					<Image className='img-fluid mb-4' src={itemsData.img} alt='Unlimited' />
+				)}
+					
+				</div>
+            
+                <div className='fs-2' component="div" variant='h5'>
+					{itemsData.title}
+				</div>
+            
+                <div className='fs-4'>
+				COP$ {itemsData.price}
+				</div>
+            
+                <div className='fw-bold fs-6 pt-2 text-muted'>
+				Categoría: {itemsData.category}
+				</div>
+            
+			<Button className='m-4'>Agregar al carrito</Button>
+        </div>
 	);
 };
 

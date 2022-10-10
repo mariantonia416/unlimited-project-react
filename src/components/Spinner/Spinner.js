@@ -1,13 +1,10 @@
-import * as React from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
 
-const Spinner = () => {
+import Spinner from 'react-bootstrap/Spinner';
+
+function Progress() {
 	return (
-		<Box sx={{ display: 'flex' }}>
-			<CircularProgress />
-		</Box>
+	  <Spinner variant="secondary" animation="border" role="status" />
 	);
-};
-
-export default Spinner;
+  }
+  
+  export default Progress;
