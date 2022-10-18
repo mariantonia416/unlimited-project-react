@@ -17,6 +17,7 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
     <div>
       <div className="d-flex align-items-center">
       <button
+        type="button"
         className="btn btn-outline-primary"
         onClick={disminuirCantidad}
       >
@@ -24,13 +25,14 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
       </button>
       <p className="m-4">{count}</p>
       <button
+        type="button"
         className="btn btn-outline-primary"
         onClick={aumentarCantidad}
       >
         +
       </button>
       </div>
-      <button className="btn btn-outline-primary" onClick={addToCart}>
+      <button type="button" className="btn btn-outline-primary" onClick={addToCart}>
         Agregar al carrito
       </button>
     </div>

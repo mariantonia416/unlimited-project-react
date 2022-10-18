@@ -1,18 +1,20 @@
 import { createContext, useState } from "react";
 
+
 export const CartContext = createContext([]);
 
 const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
 
   const AddToCart = (item, cantidad) => {
-   
+ 
     if (IsInCart(item.id)) {
       alert("El producto ya se encuentra en el carrito");
-    } else {
-      setCartList([...cartList, { item, cantidad }]);
-      alert("Se agrego el producto correctamente");
     }
+    else {
+       setCartList([...cartList, { item, cantidad }]);
+       alert("Se agrego el producto correctamente");
+     }
   };
 
   const DelItem = (id) => {
@@ -26,7 +28,7 @@ const CartContextProvider = ({ children }) => {
   }
 
   const PriceTotal = () => {
-    return cartList.reduce((acum, i) => acum + i.cantidad * i.item.precio, 0)
+    return cartList.reduce((acum, i) => acum + i.cantidad * +i.item.price, 0)
   }
 
   const EmptyCart = () =>{

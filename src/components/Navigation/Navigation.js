@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import img from '../../static/unlimited-logo.png'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -18,7 +18,7 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-			<NavDropdown title="Servicios" id="collasible-nav-dropdown">
+			<NavDropdown title="Nuestros Servicios" id="collasible-nav-dropdown">
 				<NavDropdown.Item href="/category/Pantallas">Pantallas</NavDropdown.Item>
 				<NavDropdown.Item href="/category/Sonido">Sonido</NavDropdown.Item>
 				<NavDropdown.Item href="/category/Iluminación">Iluminación</NavDropdown.Item>
@@ -30,9 +30,9 @@ const NavBar = () => {
 			<Nav.Link href="/contacto">Contáctanos</Nav.Link>
           </Nav>
 		  <Nav>
-			<Nav.Link href="/cart">
+			<Link className='text-light text-decoration-none' to="/cart">
 				<CartWidget />
-			</Nav.Link>
+			</Link>
           </Nav>
         </Navbar.Collapse>
 		</Container>

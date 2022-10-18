@@ -28,13 +28,13 @@ const App = () => {
 			<Router>
 				<Header />
 				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/category/:category' element={<Category />} />
-					<Route path='/conocenos' element={<Conocenos />} />
-					<Route path='/contacto' element={<Contacto />} />
-					<Route path='/cart' element={<Cart />} />
-					<Route path='/checkout' element={<CheckOut />} />
-					<Route path='/detail/:id' element={<ItemDetail />} />
+					<Route path="/" element={<Home />} />
+					<Route path="/category/:category" element={<Category />} />
+					<Route path="/conocenos" element={<Conocenos />} />
+					<Route path="/contacto" element={<Contacto />} />
+					<Route path="/cart" element={<Cart />} />
+					<Route path="/checkout" element={<CheckOut />} />
+					<Route path="/detail/:id" element={<ItemDetail />} />
 				</Routes>
 			</Router>
 		</CartContextProvider>

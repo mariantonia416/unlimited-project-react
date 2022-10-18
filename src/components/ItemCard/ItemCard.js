@@ -39,11 +39,11 @@ const ItemCard = ({ itemsData }) => {
 				COP$ {itemsData.price}
 				</div>
             
-                <div className='fw-bold fs-6 pt-2 text-muted'>
+                <div className='fs-6 pt-2 text-muted'>
 				Categoría: {itemsData.category}
 				</div>
             
-			<Button className='m-4'>Agregar al carrito</Button>
+			<Button type='button' className='m-4'>Ver producto</Button>
         </div>
 	);
 };

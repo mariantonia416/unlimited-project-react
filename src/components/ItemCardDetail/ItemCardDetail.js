@@ -17,11 +17,11 @@ const ItemCardDetail = ({ itemsData }) => {
     }
     return (
         <Container className='container'>
-            <Row className='d-flex flex-wrap justify-content-center'>
-                <Col className='d-flex justify-content-center col-12 col-lg-6 col-xl-6 py-5'>
+            <Row className='d-flex flex-wrap justify-content-center py-5'>
+                <Col className='d-flex justify-content-center col-12 col-lg-6 col-xl-6'>
                     <Image className='img-fluid' src={itemsData.img} alt='Unlimited' />
                 </Col>
-                <Col className='col-12 col-lg-6 col-xl-6 p-5'>
+                <Col className='col-12 col-sm-9 col-lg-6 col-xl-6 p-4 p-xl-0'>
                     
                     <Col className='fs-2'>
                         {itemsData.title}
