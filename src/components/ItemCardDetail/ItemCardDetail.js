@@ -1,12 +1,16 @@
-import * as React from 'react'
+//BOOTSTRAP
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-import ItemCount from '../Counter/Counter'
 import Image from 'react-bootstrap/Image'
+
+//COMPONENTS
+import ItemCount from '../Counter/Counter'
+
+//CONTEXT
 import { useContext } from 'react'
 import { CartContext } from '../Cart/CartContext';
+
 
 const ItemCardDetail = ({ itemsData }) => {
 

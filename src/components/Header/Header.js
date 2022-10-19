@@ -1,4 +1,6 @@
 import React from 'react';
+
+//COMPONENTS
 import NavBar from '../Navigation/Navigation';
 
 const Header = () => {

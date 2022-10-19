@@ -1,8 +1,13 @@
 
+import React, { useState, useEffect } from 'react';
+
+//BOOTSTRAP
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
+
+//COMPONENTS
 import Progress from '../Spinner/Spinner'
-import React, { useState, useEffect } from 'react';
+
 
 const ItemCard = ({ itemsData }) => {
 	
@@ -43,7 +48,7 @@ const ItemCard = ({ itemsData }) => {
 				Categoría: {itemsData.category}
 				</div>
             
-			<Button type='button' className='m-4'>Ver producto</Button>
+			<Button className='m-4'>Ver producto</Button>
         </div>
 	);
 };

@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
-// Firebase
+import React, { useContext, useState } from 'react';
+
+//FIREBASE
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 
+//BOOTSTRAP
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-
-//LINK ROUTER DOM
+//REACT ROUTER DOM
 import { Link } from "react-router-dom";
 
+//COMPONENTS
 import MessageId from '../MessageId/MessageId';
+
+//CONTEXT
+import { CartContext } from '../Cart/CartContext';
 
 const initialState = {
 	nombre: '',
@@ -20,9 +25,8 @@ const initialState = {
 
 const CheckOut = () => {
 	const [values, setValues] = useState(initialState);
-	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
-
+	const { cartList } = useContext(CartContext)
 	const handleOnChange = (e) => {
 		const { value, name } = e.target;
 		setValues({ ...values, [name]: value });
@@ -30,12 +34,15 @@ const CheckOut = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		console.log(values);
-		// Add a new document with a generated id.
 		const docRef = await addDoc(collection(db, 'purchases'), {
 			values,
+			items: cartList.map((product) => ({
+				id: product.item.id,
+				name: product.item.title,
+				price: product.item.price,
+				quantity: product.cantidad
+			}))
 		});
-		console.log('Document written with ID: ', docRef.id);
 		setPurchaseID(docRef.id);
 		setValues(initialState);
 	};
@@ -66,7 +73,7 @@ const CheckOut = () => {
 					<Link to={"/cart"} className="text-decoration-none m-2 btn btn-outline-dark" >
 						Volver al carrito
 					</Link>
-					<Button type="submit" className='btn btn-primary m-2'>Enviar compra</Button>
+					<Button type="submit" className='btn btn-primary m-2'>Finalizar orden</Button>
 				</div>
 			</Form>
 			{purchaseID && <MessageId purchaseID={purchaseID} />}

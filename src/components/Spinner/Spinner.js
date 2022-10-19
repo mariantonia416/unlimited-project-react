@@ -1,4 +1,4 @@
-
+//BOOTSTRAP
 import Spinner from 'react-bootstrap/Spinner';
 
 function Progress() {

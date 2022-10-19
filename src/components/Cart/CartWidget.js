@@ -1,4 +1,7 @@
+//BOOTSTRAP
 import { Cart4 } from 'react-bootstrap-icons';
+
+//CONTEXT
 import { useContext } from 'react'
 import { CartContext } from '../Cart/CartContext';
 

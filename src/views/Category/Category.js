@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import ItemCard from '../../components/ItemCard/ItemCard';
 
-import { db } from '../../firebase/firebaseConfig';
+//COMPONENTS
+import ItemCard from '../../components/ItemCard/ItemCard';
 
 //LINK ROUTER DOM
 import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-// FIRBASE - FIRESTORE
+// FIRBASE
 import { collection, query, getDocs, where } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig';
 
 
 const Category = () => {

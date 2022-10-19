@@ -7,13 +7,18 @@ const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
 
   const AddToCart = (item, cantidad) => {
- 
+    // (cartList.some((i) => i.item.id === item.id))
     if (IsInCart(item.id)) {
-      alert("El producto ya se encuentra en el carrito");
+    const actualizar = cartList.map ((i) => {
+      if (i.item.id === item.id) {
+        i.cantidad = cantidad + i.cantidad;
+      }
+      return i
+    })
+     setCartList (actualizar)
     }
     else {
        setCartList([...cartList, { item, cantidad }]);
-       alert("Se agrego el producto correctamente");
      }
   };
 

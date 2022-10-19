@@ -1,7 +1,9 @@
 import React, {useState, useEffect } from 'react';
+
+//COMPONENTS
 import ItemCard from '../ItemCard/ItemCard'
 
-//LINK ROUTER DOM
+//REACT ROUTER DOM
 import { Link } from "react-router-dom";
 
 //FIREBASE

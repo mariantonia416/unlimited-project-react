@@ -1,4 +1,6 @@
 import React from 'react'
+
+//COMPONENTS
 import CardList from '../../components/CardList/CardList'
 
 const Home = () => {

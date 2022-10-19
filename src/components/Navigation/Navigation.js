@@ -1,12 +1,20 @@
-import { Link } from 'react-router-dom';
-import img from '../../static/unlimited-logo.png'
+//BOOTSTRAP
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image'
 import React from 'react';
+
+//COMPONENTS
 import CartWidget from '../Cart/CartWidget';
+
+//REACT ROUTER DOM
+import { Link } from 'react-router-dom';
+
+//ASSETS
+import img from '../../static/unlimited-logo.png'
+
 
 const NavBar = () => {
 	return (
@@ -19,15 +27,15 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
 			<NavDropdown title="Nuestros Servicios" id="collasible-nav-dropdown">
-				<NavDropdown.Item href="/category/Pantallas">Pantallas</NavDropdown.Item>
-				<NavDropdown.Item href="/category/Sonido">Sonido</NavDropdown.Item>
-				<NavDropdown.Item href="/category/Iluminación">Iluminación</NavDropdown.Item>
-				<NavDropdown.Item href="/category/Techos">Techos</NavDropdown.Item>
+				<Link className='text-decoration-none text-dark dropdown-item' to="/category/Pantallas">Pantallas</Link>
+				<Link className='text-decoration-none text-dark dropdown-item' to="/category/Sonido">Sonido</Link>
+				<Link className='text-decoration-none text-dark dropdown-item' to="/category/Iluminación">Iluminación</Link>
+				<Link className='text-decoration-none text-dark dropdown-item' to="/category/Techos">Techos</Link>
 				<NavDropdown.Divider />
-				<NavDropdown.Item href="/">Ver todo</NavDropdown.Item>
-				</NavDropdown>
-			<Nav.Link href="/conocenos">Conócenos</Nav.Link>
-			<Nav.Link href="/contacto">Contáctanos</Nav.Link>
+				<Link className='text-decoration-none text-dark dropdown-item' to="/">Ver todo</Link>
+			</NavDropdown>
+			<Link className='text-decoration-none text-white-50 nav-link' to="/conocenos">Conócenos</Link>
+			<Link className='text-decoration-none text-white-50 nav-link' to="/contacto">Contáctanos</Link>
           </Nav>
 		  <Nav>
 			<Link className='text-light text-decoration-none' to="/cart">

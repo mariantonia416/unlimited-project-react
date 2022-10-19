@@ -1,3 +1,4 @@
+//BOOTSTRAP
 import { Alert } from "react-bootstrap";
 
 const MessageId = ({ purchaseID }) => {

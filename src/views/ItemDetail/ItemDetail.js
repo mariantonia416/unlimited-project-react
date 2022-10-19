@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react';
+
+//REACT ROUTER DOM
 import { useParams } from 'react-router-dom';
 
+//COMPONENTS
 import ItemCardDetail from '../../components/ItemCardDetail/ItemCardDetail';
 
-
+// FIRBASE
 import { db } from '../../firebase/firebaseConfig';
-
-// FIRBASE - FIRESTORE
-import {
-	collection,
-	query,
-	getDocs,
-	documentId,
-	where,
-} from 'firebase/firestore';
+import { collection, query, getDocs, documentId, where, } from 'firebase/firestore';
 
 const ItemDetail = () => {
 	const [user, setUser] = useState([]);

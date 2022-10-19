@@ -1,11 +1,18 @@
 import { useContext } from "react";
+
+//CART CONTEXT
 import { CartContext } from "./CartContext";
+
+//BOOTSTRAP
 import Image from 'react-bootstrap/Image'
 import { X } from 'react-bootstrap-icons';
-import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+//REACT ROUTER DOM
+import { Link } from "react-router-dom";
+
 
 const CartItem = ({ product, cantidad }) => {
   const { DelItem } = useContext(CartContext);

@@ -1,6 +1,11 @@
+//CONTEXT
 import { useContext } from "react";
-import { CartContext } from "./CartContext";
-import CartItem from "./CartItem";
+import { CartContext } from "../../components/Cart/CartContext";
+
+//COMPONENTS
+import CartItem from "../../components/Cart/CartItem";
+
+//REACT ROUTER DOM
 import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -12,8 +17,8 @@ const Cart = () => {
       {cartList.length < 1 ? (
       <>
         <p className="text-center fs-4 w-100">Su carrito actualmente está vacío</p>
-        <Link to="/">
-          <button className="btn btn-outline-primary">Ver los productos</button>
+        <Link to="/" className="btn btn-outline-primary">
+          Ver los productos
         </Link>
       </>
       ) : (
